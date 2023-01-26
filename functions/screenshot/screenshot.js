@@ -27,6 +27,7 @@ exports.handler = async (event, context) => {
     .locator("..")
     .locator("..");
   await block.scrollIntoViewIfNeeded();
+  console.log("Waiting for images to load");
   await page.waitForLoadState("networkidle");
 
   console.log("Taking screenshot");
