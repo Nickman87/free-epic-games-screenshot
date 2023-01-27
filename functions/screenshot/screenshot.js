@@ -26,6 +26,7 @@ exports.handler = async (event, context) => {
     .locator("h2", { hasText: "Free Games" })
     .locator("..")
     .locator("..");
+  console.log("Scrolling");
   await block.scrollIntoViewIfNeeded();
   console.log("Waiting for images to load");
   await page.waitForLoadState("networkidle");
